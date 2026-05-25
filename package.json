@@ -1,0 +1,41 @@
+{
+  "name": "tree-sitter-nova",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for the Nova programming language",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "tree-sitter",
+    "nova",
+    "nova-lang"
+  ],
+  "author": "Evgeniy Golovin <unitcraft@nv-lang.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nv-lang/tree-sitter-nova.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nv-lang/tree-sitter-nova/issues"
+  },
+  "homepage": "https://github.com/nv-lang/tree-sitter-nova#readme",
+  "devDependencies": {
+    "tree-sitter-cli": "^0.26.9"
+  },
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.nova",
+      "file-types": [
+        "nv"
+      ],
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm",
+      "locals": "queries/locals.scm"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+node_modules/
+build/
+*.log
+.DS_Store
+# Generated files committed (per tree-sitter convention) — НЕ ignore:
+# src/parser.c
+# src/grammar.json
+# src/node-types.json
+# bindings/

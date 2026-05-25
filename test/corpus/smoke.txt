@@ -1,0 +1,74 @@
+==================
+empty file
+==================
+
+---
+
+(source_file)
+
+==================
+single keyword + identifier
+==================
+
+fn main
+
+---
+
+(source_file
+  (keyword)
+  (identifier))
+
+==================
+line comment
+==================
+
+// hello world
+
+---
+
+(source_file
+  (line_comment))
+
+==================
+doc comment
+==================
+
+/// documentation
+
+---
+
+(source_file
+  (doc_comment))
+
+==================
+integer literal
+==================
+
+42
+
+---
+
+(source_file
+  (number_literal))
+
+==================
+hex literal
+==================
+
+0xFF_AA
+
+---
+
+(source_file
+  (number_literal))
+
+==================
+string literal
+==================
+
+"hello"
+
+---
+
+(source_file
+  (string_literal))
