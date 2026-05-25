@@ -1,0 +1,10 @@
+# Zed language config for Nova
+# Place at: zed-nova/languages/nova/config.toml
+
+name = "Nova"
+grammar = "nova"
+path_suffixes = ["nv"]
+line_comments = ["// "]
+block_comment = { start = "/* ", end = " */" }
+tab_size = 2
+hard_tabs = false

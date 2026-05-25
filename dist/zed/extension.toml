@@ -1,0 +1,30 @@
+# Zed editor extension manifest for Nova language support
+# This file is part of a minimal Zed extension package.
+#
+# To use, create a directory structure:
+#   zed-nova/
+#     extension.toml       (this file)
+#     grammars/
+#       nova.toml          (see nova.toml)
+#     languages/
+#       nova/
+#         config.toml      (see config.toml)
+#         highlights.scm   (copy from queries/highlights.scm)
+#         folds.scm        (copy from queries/folds.scm)
+#         indents.scm      (copy from queries/indents.scm)
+#         locals.scm       (copy from queries/locals.scm)
+#
+# Then install via: zed --install-extension ./zed-nova
+
+id = "nova"
+name = "Nova"
+version = "0.1.0"
+description = "Nova programming language syntax support"
+authors = ["Nova Language Team"]
+repository = "https://github.com/nv-lang/tree-sitter-nova"
+
+[lib]
+kind = "Grammar"
+
+[[grammars]]
+name = "nova"

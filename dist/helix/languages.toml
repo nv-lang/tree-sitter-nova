@@ -1,0 +1,26 @@
+# Helix editor configuration for Nova language support
+# Place this file at:
+#   Linux/macOS: ~/.config/helix/languages.toml
+#   Windows:     %AppData%\helix\languages.toml
+#
+# Or append the relevant sections to your existing languages.toml.
+#
+# After editing, run: hx --health nova  (to verify tree-sitter grammar is found)
+
+[[language]]
+name = "nova"
+scope = "source.nova"
+file-types = ["nv"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+
+[[grammar]]
+name = "nova"
+source = { git = "https://github.com/nv-lang/tree-sitter-nova", rev = "v0.1.0" }

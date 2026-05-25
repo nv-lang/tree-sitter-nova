@@ -1,0 +1,7 @@
+# Zed grammar reference for Nova
+# Place at: zed-nova/grammars/nova.toml
+
+[grammar]
+name = "nova"
+repository = "https://github.com/nv-lang/tree-sitter-nova"
+commit = "v0.1.0"
