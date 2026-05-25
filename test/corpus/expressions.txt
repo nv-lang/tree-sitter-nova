@@ -1,0 +1,324 @@
+==================
+bool literal true
+==================
+
+let b = true
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (bool_literal)))
+
+==================
+bool literal false
+==================
+
+let b = false
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (bool_literal)))
+
+==================
+char literal
+==================
+
+let c = 'a'
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (char_literal)))
+
+==================
+unary negation
+==================
+
+let n = -x
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (unary_expr
+      (identifier))))
+
+==================
+unary boolean not
+==================
+
+let f = !flag
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (unary_expr
+      (identifier))))
+
+==================
+binary addition
+==================
+
+let z = a + b
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (binary_expr
+      (identifier)
+      (identifier))))
+
+==================
+operator precedence: add and multiply
+==================
+
+let z = a + b * 2
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (binary_expr
+      (identifier)
+      (binary_expr
+        (identifier)
+        (number_literal)))))
+
+==================
+logical and
+==================
+
+let q = x && y
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (binary_expr
+      (identifier)
+      (identifier))))
+
+==================
+comparison greater-than
+==================
+
+let b = x > 0
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (binary_expr
+      (identifier)
+      (number_literal))))
+
+==================
+range expression
+==================
+
+let r = 0..10
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (range_expr
+      (number_literal)
+      (number_literal))))
+
+==================
+call expression
+==================
+
+let r = add(1, 2)
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (call_expr
+      (identifier)
+      (call_arg
+        (number_literal))
+      (call_arg
+        (number_literal)))))
+
+==================
+method call
+==================
+
+let n = v.len()
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (call_expr
+      (field_expr
+        (identifier)
+        (identifier)))))
+
+==================
+field access
+==================
+
+let y = p.y
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (field_expr
+      (identifier)
+      (identifier))))
+
+==================
+index expression
+==================
+
+let e = arr[0]
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (index_expr
+      (identifier)
+      (number_literal))))
+
+==================
+try expression
+==================
+
+let v = get()?
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (try_expr
+      (call_expr
+        (identifier)))))
+
+==================
+if-else expression
+==================
+
+let z = if a { 1 } else { 2 }
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (if_expr
+      (identifier)
+      (block
+        (expression_statement
+          (number_literal)))
+      (block
+        (expression_statement
+          (number_literal))))))
+
+==================
+match expression
+==================
+
+let r = match x { 0 => false, _ => true }
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (match_expr
+      (identifier)
+      (match_arm
+        (literal_pattern
+          (number_literal))
+        (bool_literal))
+      (match_arm
+        (wildcard_pattern)
+        (bool_literal)))))
+
+==================
+record literal
+==================
+
+let p = Point { x: 1, y: 2 }
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (record_literal
+      (type_name)
+      (field_init
+        (identifier)
+        (number_literal))
+      (field_init
+        (identifier)
+        (number_literal)))))
+
+==================
+array literal
+==================
+
+let arr = [1, 2, 3]
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (array_literal
+      (number_literal)
+      (number_literal)
+      (number_literal))))
+
+==================
+block with let and expression statement
+==================
+
+fn main() {
+  let x = 42
+  x + 1
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (let_statement
+          (identifier)
+          (number_literal))
+        (expression_statement
+          (binary_expr
+            (identifier)
+            (number_literal)))))))

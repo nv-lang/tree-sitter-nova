@@ -1,0 +1,245 @@
+==================
+module declaration
+==================
+
+module main
+
+---
+
+(source_file
+  (module_declaration
+    (dotted_path
+      (identifier))))
+
+==================
+module dotted path
+==================
+
+module std.io.net
+
+---
+
+(source_file
+  (module_declaration
+    (dotted_path
+      (identifier)
+      (identifier)
+      (identifier))))
+
+==================
+import declaration
+==================
+
+import std.io
+
+---
+
+(source_file
+  (import_declaration
+    (dotted_path
+      (identifier)
+      (identifier))))
+
+==================
+free function with params and return type
+==================
+
+fn add(a int, b int) -> int
+  => a + b
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list
+      (param
+        (identifier)
+        (named_type
+          (type_name)))
+      (param
+        (identifier)
+        (named_type
+          (type_name))))
+    (named_type
+      (type_name))
+    (fn_body
+      (binary_expr
+        (identifier)
+        (identifier)))))
+
+==================
+function with effects and unit return
+==================
+
+fn main() Io -> ()
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (effect_list
+      (effect_name))
+    (unit_type)))
+
+==================
+instance method
+==================
+
+fn Point @dist(other Point) -> int
+  => 0
+
+---
+
+(source_file
+  (fn_declaration
+    (type_name)
+    (identifier)
+    (param_list
+      (param
+        (identifier)
+        (named_type
+          (type_name))))
+    (named_type
+      (type_name))
+    (fn_body
+      (number_literal))))
+
+==================
+static method with record literal body
+==================
+
+fn Point .new() -> Point
+  => Point { x: 0, y: 0 }
+
+---
+
+(source_file
+  (fn_declaration
+    (type_name)
+    (identifier)
+    (param_list)
+    (named_type
+      (type_name))
+    (fn_body
+      (record_literal
+        (type_name)
+        (field_init
+          (identifier)
+          (number_literal))
+        (field_init
+          (identifier)
+          (number_literal))))))
+
+==================
+record type
+==================
+
+type Point { x int, y int }
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (record_type_body
+      (record_field
+        (identifier)
+        (named_type
+          (type_name)))
+      (record_field
+        (identifier)
+        (named_type
+          (type_name))))))
+
+==================
+sum type
+==================
+
+type Color | Red | Green | Blue
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (sum_type_body
+      (sum_variant
+        (type_name))
+      (sum_variant
+        (type_name))
+      (sum_variant
+        (type_name)))))
+
+==================
+alias type
+==================
+
+type Meters alias int
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (alias_type_body
+      (named_type
+        (type_name)))))
+
+==================
+generic type
+==================
+
+type Stack[T] { items []T, len int }
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (generic_params
+      (generic_param
+        (identifier)))
+    (record_type_body
+      (record_field
+        (identifier)
+        (array_type
+          (named_type
+            (type_name))))
+      (record_field
+        (identifier)
+        (named_type
+          (type_name))))))
+
+==================
+const declaration
+==================
+
+const MAX int = 100
+
+---
+
+(source_file
+  (const_declaration
+    (identifier)
+    (named_type
+      (type_name))
+    (number_literal)))
+
+==================
+test declaration
+==================
+
+test "basic" { let x = 1 }
+
+---
+
+(source_file
+  (test_declaration
+    (string_literal)
+    (block
+      (let_statement
+        (identifier)
+        (number_literal)))))

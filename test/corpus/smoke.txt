@@ -7,18 +7,6 @@ empty file
 (source_file)
 
 ==================
-single keyword + identifier
-==================
-
-fn main
-
----
-
-(source_file
-  (keyword)
-  (identifier))
-
-==================
 line comment
 ==================
 
@@ -41,34 +29,53 @@ doc comment
   (doc_comment))
 
 ==================
-integer literal
+free function no body
 ==================
 
-42
+fn main()
 
 ---
 
 (source_file
-  (number_literal))
+  (fn_declaration
+    (identifier)
+    (param_list)))
 
 ==================
-hex literal
+let integer literal
 ==================
 
-0xFF_AA
+let x = 42
 
 ---
 
 (source_file
-  (number_literal))
+  (let_declaration
+    (identifier)
+    (number_literal)))
 
 ==================
-string literal
+let hex literal
 ==================
 
-"hello"
+let x = 0xFF_AA
 
 ---
 
 (source_file
-  (string_literal))
+  (let_declaration
+    (identifier)
+    (number_literal)))
+
+==================
+let string literal
+==================
+
+let x = "hello"
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (string_literal)))
