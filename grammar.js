@@ -111,6 +111,12 @@ module.exports = grammar({
     [$.generic_type_args, $.index_expr],
     // Effect-list identifiers before `->` vs return type path.
     [$.effect_list, $.named_type],
+    // `for_expr` optional elem_type between pattern and `in` keyword.
+    [$.for_expr],
+    // `while_expr` optional condition vs `while let` form.
+    [$.while_expr],
+    // `item_attribute` optional `(args)` — GLR resolves empty vs non-empty args.
+    [$.item_attribute],
   ],
 
   rules: {
@@ -509,6 +515,18 @@ module.exports = grammar({
       $.block,
       $.if_expr,
       $.match_expr,
+      $.for_expr,
+      $.while_expr,
+      $.loop_expr,
+      $.spawn_expr,
+      $.supervised_expr,
+      $.detach_expr,
+      $.blocking_expr,
+      $.parallel_expr,
+      $.select_expr,
+      $.with_expr,
+      $.forbid_expr,
+      $.realtime_expr,
       $.closure_expr,
       $.record_literal,
       $.array_literal,
@@ -774,6 +792,138 @@ module.exports = grammar({
       optional(field('effects', $.effect_list)),
       optional(seq('->', field('return_type', $._type_expr))),
       field('body', $.fn_body),
+    ),
+
+    // ══════════════════════════════════════════════════════════════════════
+    // Control-flow expressions (Ф.3)
+    // ══════════════════════════════════════════════════════════════════════
+
+    // for [mut] pattern [ElemType] in iter { body }
+    // Optional elem_type: declared between pattern and `in` keyword.
+    // GLR resolves type-vs-`in` by trying both; `in` keyword forces resolution.
+    for_expr: $ => seq(
+      'for',
+      optional('mut'),
+      field('pattern', $._pattern),
+      optional(field('elem_type', $._type_expr)),
+      'in',
+      field('iter', $._expression),
+      field('body', $.block),
+    ),
+
+    // while condition { body }
+    // while let pattern = scrutinee { body }
+    while_expr: $ => choice(
+      seq(
+        'while', 'let',
+        field('pattern', $._pattern),
+        '=',
+        field('scrutinee', $._expression),
+        field('body', $.block),
+      ),
+      seq(
+        'while',
+        field('condition', $._expression),
+        field('body', $.block),
+      ),
+    ),
+
+    // loop { body }
+    loop_expr: $ => seq(
+      'loop',
+      field('body', $.block),
+    ),
+
+    // ══════════════════════════════════════════════════════════════════════
+    // Concurrency expressions (Ф.3)
+    // ══════════════════════════════════════════════════════════════════════
+
+    // spawn expr  — spawns a coroutine/fiber
+    spawn_expr: $ => prec.right(seq(
+      'spawn',
+      field('body', $._expression),
+    )),
+
+    // supervised [(cancel: token)] { body }
+    supervised_expr: $ => seq(
+      'supervised',
+      optional(seq(
+        '(',
+        alias($.identifier, $.keyword),  // 'cancel'
+        ':',
+        field('cancel', $._expression),
+        ')',
+      )),
+      field('body', $.block),
+    ),
+
+    // detach { body }
+    detach_expr: $ => seq(
+      'detach',
+      field('body', $.block),
+    ),
+
+    // blocking { body }
+    blocking_expr: $ => seq(
+      'blocking',
+      field('body', $.block),
+    ),
+
+    // parallel { body }
+    parallel_expr: $ => seq(
+      'parallel',
+      field('body', $.block),
+    ),
+
+    // select { arm, arm, ... }
+    select_expr: $ => seq(
+      'select',
+      '{',
+      repeat($.select_arm),
+      '}',
+    ),
+
+    // select arm: op_expr [if guard] => block [,]
+    // op_expr covers: Some(x) = chan, _ = chan, _, chan.send(val)
+    // Semantic layer distinguishes recv/send/default by shape of op_expr.
+    select_arm: $ => prec.right(seq(
+      field('op', $._expression),
+      optional(seq('if', field('guard', $._expression))),
+      '=>',
+      field('body', $.block),
+      optional(','),
+    )),
+
+    // ══════════════════════════════════════════════════════════════════════
+    // Effect-handler expressions (Ф.3)
+    // ══════════════════════════════════════════════════════════════════════
+
+    // with [#attr] Effect = handler, ... { body }
+    with_expr: $ => seq(
+      'with',
+      sep1($.with_binding, ','),
+      field('body', $.block),
+    ),
+
+    with_binding: $ => seq(
+      optional(field('attr', $.item_attribute)),
+      field('effect', $._type_expr),
+      '=',
+      field('handler', $._expression),
+    ),
+
+    // forbid Effect1, Effect2, ... { body }
+    forbid_expr: $ => seq(
+      'forbid',
+      sep1(field('effect', $._type_expr), ','),
+      field('body', $.block),
+    ),
+
+    // realtime [nogc] { body }
+    realtime_expr: $ => seq(
+      'realtime',
+      optional(alias($.identifier, $.keyword)),  // 'nogc'
+      field('body', $.block),
     ),
 
     // Record literal: TypeName { field: expr, field, ... }

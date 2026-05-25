@@ -68,6 +68,10 @@
           "named": true
         },
         {
+          "type": "blocking_expr",
+          "named": true
+        },
+        {
           "type": "bool_literal",
           "named": true
         },
@@ -88,7 +92,19 @@
           "named": true
         },
         {
+          "type": "detach_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "forbid_expr",
           "named": true
         },
         {
@@ -112,6 +128,10 @@
           "named": true
         },
         {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
           "type": "match_expr",
           "named": true
         },
@@ -124,6 +144,10 @@
           "named": true
         },
         {
+          "type": "parallel_expr",
+          "named": true
+        },
+        {
           "type": "paren_expr",
           "named": true
         },
@@ -132,7 +156,15 @@
           "named": true
         },
         {
+          "type": "realtime_expr",
+          "named": true
+        },
+        {
           "type": "record_literal",
+          "named": true
+        },
+        {
+          "type": "select_expr",
           "named": true
         },
         {
@@ -144,7 +176,15 @@
           "named": true
         },
         {
+          "type": "spawn_expr",
+          "named": true
+        },
+        {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "supervised_expr",
           "named": true
         },
         {
@@ -157,6 +197,14 @@
         },
         {
           "type": "unary_expr",
+          "named": true
+        },
+        {
+          "type": "while_expr",
+          "named": true
+        },
+        {
+          "type": "with_expr",
           "named": true
         }
       ]
@@ -231,6 +279,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -251,7 +303,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -275,6 +339,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -287,6 +355,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -295,7 +367,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -307,7 +387,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -320,6 +408,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -415,6 +511,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -435,7 +535,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -459,6 +571,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -471,6 +587,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -479,7 +599,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -491,7 +619,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -504,6 +640,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -533,6 +677,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -553,7 +701,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -577,6 +737,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -589,6 +753,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -597,7 +765,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -609,7 +785,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -622,6 +806,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -657,6 +849,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -677,7 +873,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -701,6 +909,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -713,6 +925,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -721,7 +937,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -733,7 +957,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -746,6 +978,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -781,6 +1021,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -801,7 +1045,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -825,6 +1081,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -837,6 +1097,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -845,7 +1109,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -857,7 +1129,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -870,6 +1150,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -985,6 +1273,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -1005,7 +1297,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -1029,6 +1333,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -1041,6 +1349,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -1049,7 +1361,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -1061,7 +1381,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -1074,6 +1402,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -1128,6 +1464,22 @@
     }
   },
   {
+    "type": "blocking_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "bool_literal",
     "named": true,
     "fields": {}
@@ -1161,6 +1513,10 @@
           "named": true
         },
         {
+          "type": "blocking_expr",
+          "named": true
+        },
+        {
           "type": "bool_literal",
           "named": true
         },
@@ -1181,7 +1537,19 @@
           "named": true
         },
         {
+          "type": "detach_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "forbid_expr",
           "named": true
         },
         {
@@ -1205,6 +1573,10 @@
           "named": true
         },
         {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
           "type": "match_expr",
           "named": true
         },
@@ -1217,6 +1589,10 @@
           "named": true
         },
         {
+          "type": "parallel_expr",
+          "named": true
+        },
+        {
           "type": "paren_expr",
           "named": true
         },
@@ -1225,7 +1601,15 @@
           "named": true
         },
         {
+          "type": "realtime_expr",
+          "named": true
+        },
+        {
           "type": "record_literal",
+          "named": true
+        },
+        {
+          "type": "select_expr",
           "named": true
         },
         {
@@ -1237,7 +1621,15 @@
           "named": true
         },
         {
+          "type": "spawn_expr",
+          "named": true
+        },
+        {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "supervised_expr",
           "named": true
         },
         {
@@ -1250,6 +1642,14 @@
         },
         {
           "type": "unary_expr",
+          "named": true
+        },
+        {
+          "type": "while_expr",
+          "named": true
+        },
+        {
+          "type": "with_expr",
           "named": true
         }
       ]
@@ -1298,6 +1698,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -1318,7 +1722,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -1342,6 +1758,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -1354,6 +1774,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -1362,7 +1786,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -1374,7 +1806,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -1387,6 +1827,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -1502,6 +1950,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -1522,7 +1974,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -1546,6 +2010,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -1558,6 +2026,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -1566,7 +2038,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -1578,7 +2058,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -1591,6 +2079,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -1620,6 +2116,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -1640,7 +2140,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -1664,6 +2176,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -1676,6 +2192,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -1684,7 +2204,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -1696,7 +2224,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -1709,6 +2245,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -1788,6 +2332,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -1808,7 +2356,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -1832,6 +2392,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -1844,6 +2408,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -1852,7 +2420,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -1864,7 +2440,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -1877,6 +2461,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -1912,6 +2504,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -1932,7 +2528,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -1956,6 +2564,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -1968,6 +2580,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -1976,7 +2592,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -1988,7 +2612,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -2001,6 +2633,30 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "detach_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
             "named": true
           }
         ]
@@ -2161,6 +2817,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -2181,7 +2841,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -2205,6 +2877,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -2217,6 +2893,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -2225,7 +2905,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -2237,7 +2925,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -2250,6 +2946,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -2285,6 +2989,10 @@
           "named": true
         },
         {
+          "type": "blocking_expr",
+          "named": true
+        },
+        {
           "type": "bool_literal",
           "named": true
         },
@@ -2305,7 +3013,19 @@
           "named": true
         },
         {
+          "type": "detach_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "forbid_expr",
           "named": true
         },
         {
@@ -2329,6 +3049,10 @@
           "named": true
         },
         {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
           "type": "match_expr",
           "named": true
         },
@@ -2341,6 +3065,10 @@
           "named": true
         },
         {
+          "type": "parallel_expr",
+          "named": true
+        },
+        {
           "type": "paren_expr",
           "named": true
         },
@@ -2349,7 +3077,15 @@
           "named": true
         },
         {
+          "type": "realtime_expr",
+          "named": true
+        },
+        {
           "type": "record_literal",
+          "named": true
+        },
+        {
+          "type": "select_expr",
           "named": true
         },
         {
@@ -2361,7 +3097,15 @@
           "named": true
         },
         {
+          "type": "spawn_expr",
+          "named": true
+        },
+        {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "supervised_expr",
           "named": true
         },
         {
@@ -2374,6 +3118,14 @@
         },
         {
           "type": "unary_expr",
+          "named": true
+        },
+        {
+          "type": "while_expr",
+          "named": true
+        },
+        {
+          "type": "with_expr",
           "named": true
         }
       ]
@@ -2422,6 +3174,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -2442,7 +3198,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -2466,6 +3234,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -2478,6 +3250,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -2486,7 +3262,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -2498,7 +3282,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -2511,6 +3303,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -2556,6 +3356,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -2576,7 +3380,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -2600,6 +3416,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -2612,6 +3432,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -2620,7 +3444,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -2632,7 +3464,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -2645,6 +3485,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -2674,6 +3522,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -2694,7 +3546,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -2718,6 +3582,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -2730,6 +3598,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -2738,7 +3610,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -2750,7 +3630,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -2763,6 +3651,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -2858,6 +3754,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -2878,7 +3778,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -2902,6 +3814,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -2914,6 +3830,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -2922,7 +3842,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -2934,7 +3862,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -2947,6 +3883,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -3240,6 +4184,298 @@
     }
   },
   {
+    "type": "for_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      },
+      "elem_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "fixed_array_type",
+            "named": true
+          },
+          {
+            "type": "fn_type",
+            "named": true
+          },
+          {
+            "type": "named_type",
+            "named": true
+          },
+          {
+            "type": "protocol_type",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "unit_type",
+            "named": true
+          }
+        ]
+      },
+      "iter": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      },
+      "pattern": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "literal_pattern",
+            "named": true
+          },
+          {
+            "type": "name_pattern",
+            "named": true
+          },
+          {
+            "type": "rest_pattern",
+            "named": true
+          },
+          {
+            "type": "tuple_pattern",
+            "named": true
+          },
+          {
+            "type": "wildcard_pattern",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "forbid_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      },
+      "effect": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "fixed_array_type",
+            "named": true
+          },
+          {
+            "type": "fn_type",
+            "named": true
+          },
+          {
+            "type": "named_type",
+            "named": true
+          },
+          {
+            "type": "protocol_type",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "unit_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "generic_bounds",
     "named": true,
     "fields": {},
@@ -3421,6 +4657,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -3441,7 +4681,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -3465,6 +4717,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -3477,6 +4733,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -3485,7 +4745,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -3497,7 +4765,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -3510,6 +4786,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -3573,6 +4857,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -3593,7 +4881,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -3617,6 +4917,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -3629,6 +4933,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -3637,7 +4945,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -3649,7 +4965,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -3662,6 +4986,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -3705,6 +5037,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -3725,7 +5061,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -3749,6 +5097,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -3761,6 +5113,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -3769,7 +5125,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -3781,7 +5145,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -3794,6 +5166,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -3901,6 +5281,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -3921,7 +5305,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -3945,6 +5341,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -3957,6 +5357,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -3965,7 +5369,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -3977,7 +5389,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -3990,6 +5410,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -4019,6 +5447,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -4039,7 +5471,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -4063,6 +5507,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -4075,6 +5523,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -4083,7 +5535,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -4095,7 +5555,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -4108,6 +5576,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -4143,6 +5619,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -4163,7 +5643,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -4187,6 +5679,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -4199,6 +5695,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -4207,7 +5707,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -4219,7 +5727,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -4232,6 +5748,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -4305,6 +5829,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -4325,7 +5853,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -4349,6 +5889,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -4361,6 +5905,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -4369,7 +5917,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -4381,7 +5937,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -4394,6 +5958,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -4519,6 +6091,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -4539,7 +6115,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -4563,6 +6151,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -4575,6 +6167,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -4583,7 +6179,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -4595,7 +6199,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -4608,6 +6220,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -4687,6 +6307,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -4707,7 +6331,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -4731,6 +6367,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -4743,6 +6383,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -4751,7 +6395,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -4763,7 +6415,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -4776,6 +6436,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -4803,6 +6471,22 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "loop_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -4834,6 +6518,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -4854,7 +6542,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -4878,6 +6578,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -4890,6 +6594,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -4898,7 +6606,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -4910,7 +6626,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -4923,6 +6647,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -4984,6 +6716,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -5004,7 +6740,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -5028,6 +6776,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -5040,6 +6792,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -5048,7 +6804,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -5060,7 +6824,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -5073,6 +6845,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -5142,6 +6922,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -5162,7 +6946,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -5186,6 +6982,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -5198,6 +6998,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -5206,7 +7010,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -5218,7 +7030,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -5231,6 +7051,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -5375,6 +7203,22 @@
     }
   },
   {
+    "type": "parallel_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "param",
     "named": true,
     "fields": {
@@ -5403,6 +7247,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -5423,7 +7271,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -5447,6 +7307,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -5459,6 +7323,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -5467,7 +7335,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -5479,7 +7355,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -5492,6 +7376,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -5586,6 +7478,10 @@
           "named": true
         },
         {
+          "type": "blocking_expr",
+          "named": true
+        },
+        {
           "type": "bool_literal",
           "named": true
         },
@@ -5606,7 +7502,19 @@
           "named": true
         },
         {
+          "type": "detach_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "forbid_expr",
           "named": true
         },
         {
@@ -5630,6 +7538,10 @@
           "named": true
         },
         {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
           "type": "match_expr",
           "named": true
         },
@@ -5642,6 +7554,10 @@
           "named": true
         },
         {
+          "type": "parallel_expr",
+          "named": true
+        },
+        {
           "type": "paren_expr",
           "named": true
         },
@@ -5650,7 +7566,15 @@
           "named": true
         },
         {
+          "type": "realtime_expr",
+          "named": true
+        },
+        {
           "type": "record_literal",
+          "named": true
+        },
+        {
+          "type": "select_expr",
           "named": true
         },
         {
@@ -5662,7 +7586,15 @@
           "named": true
         },
         {
+          "type": "spawn_expr",
+          "named": true
+        },
+        {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "supervised_expr",
           "named": true
         },
         {
@@ -5675,6 +7607,14 @@
         },
         {
           "type": "unary_expr",
+          "named": true
+        },
+        {
+          "type": "while_expr",
+          "named": true
+        },
+        {
+          "type": "with_expr",
           "named": true
         }
       ]
@@ -5781,6 +7721,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -5801,7 +7745,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -5825,6 +7781,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -5837,6 +7797,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -5845,7 +7809,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -5857,7 +7829,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -5870,6 +7850,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -5913,6 +7901,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -5933,7 +7925,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -5957,6 +7961,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -5969,6 +7977,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -5977,7 +7989,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -5989,7 +8009,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -6003,9 +8031,43 @@
           {
             "type": "unary_expr",
             "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
           }
         ]
       }
+    }
+  },
+  {
+    "type": "realtime_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "keyword",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -6143,6 +8205,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -6163,7 +8229,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -6187,6 +8265,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -6199,6 +8281,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -6207,7 +8293,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -6219,7 +8313,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -6233,9 +8335,380 @@
           {
             "type": "unary_expr",
             "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
           }
         ]
       }
+    }
+  },
+  {
+    "type": "select_arm",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      },
+      "guard": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "select_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "select_arm",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -6304,6 +8777,178 @@
     }
   },
   {
+    "type": "spawn_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "string_interpolation",
     "named": true,
     "fields": {},
@@ -6332,6 +8977,10 @@
           "named": true
         },
         {
+          "type": "blocking_expr",
+          "named": true
+        },
+        {
           "type": "bool_literal",
           "named": true
         },
@@ -6352,7 +9001,19 @@
           "named": true
         },
         {
+          "type": "detach_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "forbid_expr",
           "named": true
         },
         {
@@ -6376,6 +9037,10 @@
           "named": true
         },
         {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
           "type": "match_expr",
           "named": true
         },
@@ -6388,6 +9053,10 @@
           "named": true
         },
         {
+          "type": "parallel_expr",
+          "named": true
+        },
+        {
           "type": "paren_expr",
           "named": true
         },
@@ -6396,7 +9065,15 @@
           "named": true
         },
         {
+          "type": "realtime_expr",
+          "named": true
+        },
+        {
           "type": "record_literal",
+          "named": true
+        },
+        {
+          "type": "select_expr",
           "named": true
         },
         {
@@ -6408,7 +9085,15 @@
           "named": true
         },
         {
+          "type": "spawn_expr",
+          "named": true
+        },
+        {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "supervised_expr",
           "named": true
         },
         {
@@ -6421,6 +9106,14 @@
         },
         {
           "type": "unary_expr",
+          "named": true
+        },
+        {
+          "type": "while_expr",
+          "named": true
+        },
+        {
+          "type": "with_expr",
           "named": true
         }
       ]
@@ -6515,6 +9208,198 @@
     }
   },
   {
+    "type": "supervised_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      },
+      "cancel": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "test_declaration",
     "named": true,
     "fields": {
@@ -6569,6 +9454,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -6589,7 +9478,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -6613,6 +9514,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -6625,6 +9530,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -6633,7 +9542,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -6645,7 +9562,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -6658,6 +9583,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -6693,6 +9626,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -6713,7 +9650,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -6737,6 +9686,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -6749,6 +9702,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -6757,7 +9714,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -6769,7 +9734,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -6782,6 +9755,14 @@
           },
           {
             "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
             "named": true
           }
         ]
@@ -6817,6 +9798,10 @@
           "named": true
         },
         {
+          "type": "blocking_expr",
+          "named": true
+        },
+        {
           "type": "bool_literal",
           "named": true
         },
@@ -6837,7 +9822,19 @@
           "named": true
         },
         {
+          "type": "detach_expr",
+          "named": true
+        },
+        {
           "type": "field_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "forbid_expr",
           "named": true
         },
         {
@@ -6861,6 +9858,10 @@
           "named": true
         },
         {
+          "type": "loop_expr",
+          "named": true
+        },
+        {
           "type": "match_expr",
           "named": true
         },
@@ -6873,6 +9874,10 @@
           "named": true
         },
         {
+          "type": "parallel_expr",
+          "named": true
+        },
+        {
           "type": "paren_expr",
           "named": true
         },
@@ -6881,7 +9886,15 @@
           "named": true
         },
         {
+          "type": "realtime_expr",
+          "named": true
+        },
+        {
           "type": "record_literal",
+          "named": true
+        },
+        {
+          "type": "select_expr",
           "named": true
         },
         {
@@ -6893,7 +9906,15 @@
           "named": true
         },
         {
+          "type": "spawn_expr",
+          "named": true
+        },
+        {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "supervised_expr",
           "named": true
         },
         {
@@ -6906,6 +9927,14 @@
         },
         {
           "type": "unary_expr",
+          "named": true
+        },
+        {
+          "type": "while_expr",
+          "named": true
+        },
+        {
+          "type": "with_expr",
           "named": true
         }
       ]
@@ -7084,6 +10113,10 @@
             "named": true
           },
           {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
             "type": "bool_literal",
             "named": true
           },
@@ -7104,7 +10137,19 @@
             "named": true
           },
           {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
             "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
             "named": true
           },
           {
@@ -7128,6 +10173,10 @@
             "named": true
           },
           {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
             "type": "match_expr",
             "named": true
           },
@@ -7140,6 +10189,10 @@
             "named": true
           },
           {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
             "type": "paren_expr",
             "named": true
           },
@@ -7148,7 +10201,15 @@
             "named": true
           },
           {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
             "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
             "named": true
           },
           {
@@ -7160,7 +10221,15 @@
             "named": true
           },
           {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
             "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
             "named": true
           },
           {
@@ -7174,6 +10243,14 @@
           {
             "type": "unary_expr",
             "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
           }
         ]
       }
@@ -7183,6 +10260,622 @@
     "type": "unit_type",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "while_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      },
+      "pattern": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "literal_pattern",
+            "named": true
+          },
+          {
+            "type": "name_pattern",
+            "named": true
+          },
+          {
+            "type": "rest_pattern",
+            "named": true
+          },
+          {
+            "type": "tuple_pattern",
+            "named": true
+          },
+          {
+            "type": "wildcard_pattern",
+            "named": true
+          }
+        ]
+      },
+      "scrutinee": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "with_binding",
+    "named": true,
+    "fields": {
+      "attr": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "item_attribute",
+            "named": true
+          }
+        ]
+      },
+      "effect": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "fixed_array_type",
+            "named": true
+          },
+          {
+            "type": "fn_type",
+            "named": true
+          },
+          {
+            "type": "named_type",
+            "named": true
+          },
+          {
+            "type": "protocol_type",
+            "named": true
+          },
+          {
+            "type": "tuple_type",
+            "named": true
+          },
+          {
+            "type": "unit_type",
+            "named": true
+          }
+        ]
+      },
+      "handler": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_literal",
+            "named": true
+          },
+          {
+            "type": "as_expr",
+            "named": true
+          },
+          {
+            "type": "bang_expr",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "blocking_expr",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
+            "type": "call_expr",
+            "named": true
+          },
+          {
+            "type": "char_literal",
+            "named": true
+          },
+          {
+            "type": "closure_expr",
+            "named": true
+          },
+          {
+            "type": "coalesce_expr",
+            "named": true
+          },
+          {
+            "type": "detach_expr",
+            "named": true
+          },
+          {
+            "type": "field_expr",
+            "named": true
+          },
+          {
+            "type": "for_expr",
+            "named": true
+          },
+          {
+            "type": "forbid_expr",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_expr",
+            "named": true
+          },
+          {
+            "type": "implies_expr",
+            "named": true
+          },
+          {
+            "type": "index_expr",
+            "named": true
+          },
+          {
+            "type": "is_expr",
+            "named": true
+          },
+          {
+            "type": "loop_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "method_call_expr",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parallel_expr",
+            "named": true
+          },
+          {
+            "type": "paren_expr",
+            "named": true
+          },
+          {
+            "type": "range_expr",
+            "named": true
+          },
+          {
+            "type": "realtime_expr",
+            "named": true
+          },
+          {
+            "type": "record_literal",
+            "named": true
+          },
+          {
+            "type": "select_expr",
+            "named": true
+          },
+          {
+            "type": "self_expr",
+            "named": true
+          },
+          {
+            "type": "self_field_expr",
+            "named": true
+          },
+          {
+            "type": "spawn_expr",
+            "named": true
+          },
+          {
+            "type": "string_literal",
+            "named": true
+          },
+          {
+            "type": "supervised_expr",
+            "named": true
+          },
+          {
+            "type": "try_expr",
+            "named": true
+          },
+          {
+            "type": "tuple_expr",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          },
+          {
+            "type": "while_expr",
+            "named": true
+          },
+          {
+            "type": "with_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "with_expr",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "with_binding",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "!",
@@ -7374,6 +11067,10 @@
     "extra": true
   },
   {
+    "type": "blocking",
+    "named": false
+  },
+  {
     "type": "break_statement",
     "named": true
   },
@@ -7395,6 +11092,10 @@
   },
   {
     "type": "defer",
+    "named": false
+  },
+  {
+    "type": "detach",
     "named": false
   },
   {
@@ -7435,6 +11136,14 @@
     "named": false
   },
   {
+    "type": "for",
+    "named": false
+  },
+  {
+    "type": "forbid",
+    "named": false
+  },
+  {
     "type": "identifier",
     "named": true
   },
@@ -7451,8 +11160,16 @@
     "named": true
   },
   {
+    "type": "in",
+    "named": false
+  },
+  {
     "type": "is",
     "named": false
+  },
+  {
+    "type": "keyword",
+    "named": true
   },
   {
     "type": "lemma",
@@ -7466,6 +11183,10 @@
     "type": "line_comment",
     "named": true,
     "extra": true
+  },
+  {
+    "type": "loop",
+    "named": false
   },
   {
     "type": "match",
@@ -7492,6 +11213,10 @@
     "named": false
   },
   {
+    "type": "parallel",
+    "named": false
+  },
+  {
     "type": "protocol",
     "named": false
   },
@@ -7500,7 +11225,23 @@
     "named": false
   },
   {
+    "type": "realtime",
+    "named": false
+  },
+  {
     "type": "return",
+    "named": false
+  },
+  {
+    "type": "select",
+    "named": false
+  },
+  {
+    "type": "spawn",
+    "named": false
+  },
+  {
+    "type": "supervised",
     "named": false
   },
   {
@@ -7528,8 +11269,16 @@
     "named": false
   },
   {
+    "type": "while",
+    "named": false
+  },
+  {
     "type": "wildcard_pattern",
     "named": true
+  },
+  {
+    "type": "with",
+    "named": false
   },
   {
     "type": "{",

@@ -1,0 +1,456 @@
+==================
+for loop
+==================
+
+fn f() { for x in items { } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (for_expr
+            (name_pattern
+              (identifier))
+            (identifier)
+            (block)))))))
+
+==================
+while loop
+==================
+
+fn f() { while n > 0 { n -= 1 } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (while_expr
+            (binary_expr
+              (identifier)
+              (number_literal))
+            (block
+              (assignment_statement
+                (identifier)
+                (number_literal)))))))))
+
+==================
+infinite loop with break
+==================
+
+fn f() { loop { break } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (loop_expr
+            (block
+              (break_statement))))))))
+
+==================
+while let pattern
+==================
+
+fn f() { while let Some(x) = q.recv() { process(x) } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (while_expr
+            (name_pattern
+              (identifier)
+              (name_pattern
+                (identifier)))
+            (call_expr
+              (field_expr
+                (identifier)
+                (identifier)))
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier)
+                  (call_arg
+                    (identifier)))))))))))
+
+==================
+return with value
+==================
+
+fn f() { return 42 }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (return_statement
+          (number_literal))))))
+
+==================
+defer statement
+==================
+
+fn f() { defer close() }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (defer_statement
+          (call_expr
+            (identifier)))))))
+
+==================
+throw statement
+==================
+
+fn f() { throw error }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (throw_statement
+          (identifier))))))
+
+==================
+continue in for loop
+==================
+
+fn f() { for x in items { continue } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (for_expr
+            (name_pattern
+              (identifier))
+            (identifier)
+            (block
+              (continue_statement))))))))
+
+==================
+spawn expression
+==================
+
+let h = spawn task()
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (spawn_expr
+      (call_expr
+        (identifier)))))
+
+==================
+blocking expression
+==================
+
+fn f() { blocking { read() } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (blocking_expr
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier))))))))))
+
+==================
+detach expression
+==================
+
+fn f() { detach { work() } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (detach_expr
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier))))))))))
+
+==================
+parallel with spawns
+==================
+
+fn f() { parallel { spawn a()  spawn b() } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (parallel_expr
+            (block
+              (expression_statement
+                (spawn_expr
+                  (call_expr
+                    (identifier))))
+              (expression_statement
+                (spawn_expr
+                  (call_expr
+                    (identifier)))))))))))
+
+==================
+supervised expression
+==================
+
+fn f() { supervised { spawn w() } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (supervised_expr
+            (block
+              (expression_statement
+                (spawn_expr
+                  (call_expr
+                    (identifier)))))))))))
+
+==================
+select default arm
+==================
+
+fn f() { select { _ => { break } } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (select_expr
+            (select_arm
+              (identifier)
+              (block
+                (break_statement)))))))))
+
+==================
+with effect handler
+==================
+
+fn f() { with Io = stdout { println() } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (with_expr
+            (with_binding
+              (named_type
+                (type_name))
+              (identifier))
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier))))))))))
+
+==================
+forbid effect
+==================
+
+fn f() { forbid Io { compute() } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (forbid_expr
+            (named_type
+              (type_name))
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier))))))))))
+
+==================
+realtime block
+==================
+
+fn f() { realtime { tick() } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (realtime_expr
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier))))))))))
+
+==================
+generic function with bound
+==================
+
+fn max[T Ord](a T, b T) -> T
+  => a
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (generic_params
+      (generic_param
+        (identifier)
+        (generic_bounds
+          (named_type
+            (type_name)))))
+    (param_list
+      (param
+        (identifier)
+        (named_type
+          (type_name)))
+      (param
+        (identifier)
+        (named_type
+          (type_name))))
+    (named_type
+      (type_name))
+    (fn_body
+      (identifier))))
+
+==================
+generic function no bound
+==================
+
+fn id[T](x T) -> T
+  => x
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (generic_params
+      (generic_param
+        (identifier)))
+    (param_list
+      (param
+        (identifier)
+        (named_type
+          (type_name))))
+    (named_type
+      (type_name))
+    (fn_body
+      (identifier))))
+
+==================
+effect type declaration
+==================
+
+type Logger effect { log(msg str) }
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (effect_type_body
+      (effect_method
+        (identifier)
+        (param_list
+          (param
+            (identifier)
+            (named_type
+              (type_name))))))))
+
+==================
+protocol type declaration
+==================
+
+type Printable protocol { print() }
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (protocol_type_body
+      (effect_method
+        (identifier)
+        (param_list)))))
