@@ -1,0 +1,497 @@
+==================
+string interpolation
+==================
+
+let s = "hello ${name}"
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (string_literal
+      (string_interpolation
+        (identifier)))))
+
+==================
+nested string interpolation
+==================
+
+let msg = "x=${x + 1}"
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (string_literal
+      (string_interpolation
+        (binary_expr
+          (identifier)
+          (number_literal))))))
+
+==================
+bang unwrap
+==================
+
+let x = opt!!
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (bang_expr
+      (identifier))))
+
+==================
+coalesce operator
+==================
+
+let x = opt ?? 0
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (coalesce_expr
+      (identifier)
+      (number_literal))))
+
+==================
+as cast
+==================
+
+let n = x as int
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (as_expr
+      (identifier)
+      (named_type
+        (type_name)))))
+
+==================
+is type check
+==================
+
+let b = x is Option
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (is_expr
+      (identifier)
+      (named_type
+        (type_name)))))
+
+==================
+tuple expression
+==================
+
+let t = (1, 2, 3)
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (tuple_expr
+      (number_literal)
+      (number_literal)
+      (number_literal))))
+
+==================
+float literal
+==================
+
+let pi = 3.14159
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (number_literal)))
+
+==================
+export function
+==================
+
+export fn add(a int, b int) -> int => a + b
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list
+      (param
+        (identifier)
+        (named_type
+          (type_name)))
+      (param
+        (identifier)
+        (named_type
+          (type_name))))
+    (named_type
+      (type_name))
+    (fn_body
+      (binary_expr
+        (identifier)
+        (identifier)))))
+
+==================
+self field access in method
+==================
+
+fn Point @x() -> int => @x
+
+---
+
+(source_file
+  (fn_declaration
+    (type_name)
+    (identifier)
+    (param_list)
+    (named_type
+      (type_name))
+    (fn_body
+      (self_field_expr
+        (identifier)))))
+
+==================
+try operator
+==================
+
+let f = open("file.txt")?
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (try_expr
+      (call_expr
+        (identifier)
+        (call_arg
+          (string_literal))))))
+
+==================
+chained method calls
+==================
+
+let r = vec.map(f).filter(g).len()
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (call_expr
+      (field_expr
+        (call_expr
+          (field_expr
+            (call_expr
+              (field_expr
+                (identifier)
+                (identifier))
+              (call_arg
+                (identifier)))
+            (identifier))
+          (call_arg
+            (identifier)))
+        (identifier)))))
+
+==================
+range in for loop
+==================
+
+fn f() { for i in 0..10 { use(i) } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (for_expr
+            (name_pattern
+              (identifier))
+            (range_expr
+              (number_literal)
+              (number_literal))
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier)
+                  (call_arg
+                    (identifier)))))))))))
+
+==================
+range inclusive in for loop
+==================
+
+fn f() { for i in 0..=9 { use(i) } }
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (for_expr
+            (name_pattern
+              (identifier))
+            (range_expr
+              (number_literal)
+              (number_literal))
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier)
+                  (call_arg
+                    (identifier)))))))))))
+
+==================
+nested if-else
+==================
+
+let r = if a { 1 } else if b { 2 } else { 3 }
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (if_expr
+      (identifier)
+      (block
+        (expression_statement
+          (number_literal)))
+      (if_expr
+        (identifier)
+        (block
+          (expression_statement
+            (number_literal)))
+        (block
+          (expression_statement
+            (number_literal)))))))
+
+==================
+while let in function
+==================
+
+fn f() {
+  while let Some(v) = next() {
+    process(v)
+  }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (while_expr
+            (name_pattern
+              (identifier)
+              (name_pattern
+                (identifier)))
+            (call_expr
+              (identifier))
+            (block
+              (expression_statement
+                (call_expr
+                  (identifier)
+                  (call_arg
+                    (identifier)))))))))))
+
+==================
+logical operators
+==================
+
+let ok = a && b || !c
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (binary_expr
+      (binary_expr
+        (identifier)
+        (identifier))
+      (unary_expr
+        (identifier)))))
+
+==================
+bitwise operators
+==================
+
+let mask = flags & 0xFF | (extra << 4)
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (binary_expr
+      (binary_expr
+        (identifier)
+        (number_literal))
+      (paren_expr
+        (binary_expr
+          (identifier)
+          (number_literal))))))
+
+==================
+match with guard in function
+==================
+
+fn classify(x int) -> str {
+  match x {
+    n if n > 0 => "positive",
+    0 => "zero",
+    _ => "negative",
+  }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list
+      (param
+        (identifier)
+        (named_type
+          (type_name))))
+    (named_type
+      (type_name))
+    (fn_body
+      (block
+        (expression_statement
+          (match_expr
+            (identifier)
+            (match_arm
+              (name_pattern
+                (identifier))
+              (binary_expr
+                (identifier)
+                (number_literal))
+              (string_literal))
+            (match_arm
+              (literal_pattern
+                (number_literal))
+              (string_literal))
+            (match_arm
+              (wildcard_pattern)
+              (string_literal))))))))
+
+==================
+tuple type in function
+==================
+
+fn swap(p (int, int)) -> (int, int) => (p.1, p.0)
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list
+      (param
+        (identifier)
+        (tuple_type
+          (named_type
+            (type_name))
+          (named_type
+            (type_name)))))
+    (tuple_type
+      (named_type
+        (type_name))
+      (named_type
+        (type_name)))
+    (fn_body
+      (tuple_expr
+        (field_expr
+          (identifier)
+          (number_literal))
+        (field_expr
+          (identifier)
+          (number_literal))))))
+
+==================
+const declaration
+==================
+
+const MAX_SIZE int = 1024
+
+---
+
+(source_file
+  (const_declaration
+    (identifier)
+    (named_type
+      (type_name))
+    (number_literal)))
+
+==================
+block expression
+==================
+
+let r = {
+  let a = 1
+  let b = 2
+  a + b
+}
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (block
+      (let_statement
+        (identifier)
+        (number_literal))
+      (let_statement
+        (identifier)
+        (number_literal))
+      (expression_statement
+        (binary_expr
+          (identifier)
+          (identifier))))))
+
+==================
+array literal
+==================
+
+let arr = [1, 2, 3]
+
+---
+
+(source_file
+  (let_declaration
+    (identifier)
+    (array_literal
+      (number_literal)
+      (number_literal)
+      (number_literal))))

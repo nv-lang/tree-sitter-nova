@@ -736,9 +736,10 @@ module.exports = grammar({
       '}',
     ),
 
-    // match arm: pattern => expr (block is a subtype of expression)
+    // match arm: pattern [if guard] => expr
     match_arm: $ => seq(
       field('pattern', $._pattern),
+      optional(seq('if', field('guard', $._expression))),
       '=>',
       field('body', $._expression),
       optional(','),  // comma separator between arms; optional after last
