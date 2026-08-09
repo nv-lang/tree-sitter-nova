@@ -23,8 +23,10 @@ module std.io.net
   (module_declaration
     (dotted_path
       (identifier)
-      (identifier)
-      (identifier))))
+      (dotted_path
+        (identifier)
+        (dotted_path
+          (identifier))))))
 
 ==================
 import declaration
@@ -38,7 +40,8 @@ import std.io
   (import_declaration
     (dotted_path
       (identifier)
-      (identifier))))
+      (dotted_path
+        (identifier)))))
 
 ==================
 free function with params and return type
@@ -158,20 +161,21 @@ type Point { x int, y int }
 sum type
 ==================
 
-type Color | Red | Green | Blue
+type Color enum Red | Green | Blue
 
 ---
 
 (source_file
   (type_declaration
     (type_name)
-    (sum_type_body
-      (sum_variant
-        (type_name))
-      (sum_variant
-        (type_name))
-      (sum_variant
-        (type_name)))))
+    (newtype_body
+      (enum_type
+        (sum_variant
+          (type_name))
+        (sum_variant
+          (type_name))
+        (sum_variant
+          (type_name))))))
 
 ==================
 alias type

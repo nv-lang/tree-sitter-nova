@@ -6,7 +6,7 @@
 
 ; Type body variants
 (record_type_body) @fold
-(sum_type_body) @fold
+(enum_type) @fold
 (effect_type_body) @fold
 (protocol_type_body) @fold
 

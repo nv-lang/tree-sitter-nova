@@ -367,9 +367,9 @@ match with guard in function
 
 fn classify(x int) -> str {
   match x {
-    n if n > 0 => "positive",
-    0 => "zero",
-    _ => "negative",
+    n if n > 0 => "positive"
+    0 => "zero"
+    _ => "negative"
   }
 }
 

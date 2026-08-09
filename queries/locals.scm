@@ -23,12 +23,15 @@
 ; Generic type parameter definition
 (generic_param name: (identifier) @local.definition)
 
-; Const / top-level let
+; Const / top-level let / top-level ro
 (const_declaration name: (identifier) @local.definition)
 (let_declaration name: (identifier) @local.definition)
+(ro_declaration name: (identifier) @local.definition)
 
-; Local let binding
+; Local let binding / ro-mut-consume binding / scope-local const
 (let_statement name: (identifier) @local.definition)
+(binding_statement pattern: (identifier) @local.definition)
+(const_statement name: (identifier) @local.definition)
 
 ; Function parameters
 (param name: (identifier) @local.definition)

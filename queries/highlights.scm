@@ -7,8 +7,8 @@
 ; All other keywords below are anonymous tokens accessible in queries.
 [
   "module" "import" "use" "export" "external"
-  "fn" "type" "effect" "alias"
-  "let" "const" "mut" "consume" "readonly"
+  "fn" "type" "effect" "alias" "enum" "priv" "pub"
+  "let" "const" "ro" "mut" "consume"
   "if" "else" "match" "for" "while" "loop" "in"
   "return" "test"
   "with" "throw"
@@ -74,6 +74,9 @@
 (let_declaration name: (identifier) @variable)
 (let_statement name: (identifier) @variable)
 (const_declaration name: (identifier) @constant)
+(ro_declaration name: (identifier) @variable)
+(binding_statement pattern: (identifier) @variable)
+(const_statement name: (identifier) @constant)
 
 ; Function parameters
 (param name: (identifier) @variable.parameter)

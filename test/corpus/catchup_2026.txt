@@ -1,0 +1,879 @@
+==================
+ro mut consume binding statements
+==================
+
+fn f() {
+    ro x = 5
+    mut counter = 0
+    consume sb = StringBuilder.new()
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (binding_statement
+          pattern: (identifier)
+          value: (number_literal))
+        (binding_statement
+          pattern: (identifier)
+          value: (number_literal))
+        (binding_statement
+          pattern: (identifier)
+          value: (call_expr
+            func: (field_expr
+              object: (identifier)
+              field: (identifier))))))))
+
+==================
+ro binding with type annotation
+==================
+
+fn f() {
+    ro x int = 5
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (binding_statement
+          pattern: (identifier)
+          type: (named_type
+            name: (type_name))
+          value: (number_literal))))))
+
+==================
+tuple and record destructure bindings
+==================
+
+fn f() {
+    ro (a, b) = pair
+    mut { name, age } = user
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (binding_statement
+          (tuple_pattern
+            (name_pattern
+              (identifier))
+            (name_pattern
+              (identifier)))
+          (identifier))
+        (binding_statement
+          (record_destructure_pattern
+            (pattern_field
+              (identifier))
+            (pattern_field
+              (identifier)))
+          (identifier))))))
+
+==================
+module-level ro declaration
+==================
+
+ro NOW = Time.now()
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (call_expr
+      func: (field_expr
+        object: (identifier)
+        field: (identifier)))))
+
+==================
+scope-local const statement
+==================
+
+fn f() {
+    const HEADER_SIZE = 16
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (const_statement
+          (identifier)
+          (number_literal))))))
+
+==================
+if pattern-bind without let
+==================
+
+fn f() {
+    if Some(user) = cache.get(key) {
+        use(user)
+    } else if ro n = compute() {
+        use(n)
+    }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (if_expr
+            pattern: (name_pattern
+              name: (identifier)
+              (name_pattern
+                name: (identifier)))
+            value: (call_expr
+              func: (field_expr
+                object: (identifier)
+                field: (identifier))
+              args: (call_arg
+                (identifier)))
+            then: (block
+              (expression_statement
+                (call_expr
+                  func: (identifier)
+                  args: (call_arg
+                    (identifier)))))
+            else: (if_expr
+              pattern: (name_pattern
+                name: (identifier))
+              value: (call_expr
+                func: (identifier))
+              then: (block
+                (expression_statement
+                  (call_expr
+                    func: (identifier)
+                    args: (call_arg
+                      (identifier))))))))))))
+
+==================
+while pattern-bind with guard
+==================
+
+fn f() {
+    while Some(item) = queue.pop() && item.valid {
+        handle(item)
+    }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (while_expr
+            pattern: (name_pattern
+              name: (identifier)
+              (name_pattern
+                name: (identifier)))
+            scrutinee: (binary_expr
+              left: (call_expr
+                func: (field_expr
+                  object: (identifier)
+                  field: (identifier)))
+              right: (field_expr
+                object: (identifier)
+                field: (identifier)))
+            body: (block
+              (expression_statement
+                (call_expr
+                  func: (identifier)
+                  args: (call_arg
+                    (identifier)))))))))))
+
+==================
+sum type enum marker inline
+==================
+
+type Color enum Red | Green | Blue
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (newtype_body
+      (enum_type
+        (sum_variant
+          (type_name))
+        (sum_variant
+          (type_name))
+        (sum_variant
+          (type_name))))))
+
+==================
+sum type enum marker multiline
+==================
+
+type Result[T, E] enum
+    | Ok(T)
+    | Err(E)
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (generic_params
+      (generic_param
+        (identifier))
+      (generic_param
+        (identifier)))
+    (newtype_body
+      (enum_type
+        (sum_variant
+          (type_name)
+          (named_type
+            (type_name)))
+        (sum_variant
+          (type_name)
+          (named_type
+            (type_name)))))))
+
+==================
+inline enum type-expr in param position
+==================
+
+fn job(a enum A | B) => a
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list
+      (param
+        (identifier)
+        (enum_type
+          (sum_variant
+            (type_name))
+          (sum_variant
+            (type_name)))))
+    (fn_body
+      (identifier))))
+
+==================
+spawn consume single binding
+==================
+
+fn f() {
+    spawn consume conn { handle_client(conn) }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (spawn_expr
+            names: (identifier)
+            body: (block
+              (expression_statement
+                (call_expr
+                  func: (identifier)
+                  args: (call_arg
+                    (identifier)))))))))))
+
+==================
+spawn consume with binding expr
+==================
+
+fn f() {
+    spawn consume c = expr { body }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (spawn_expr
+            body: (consume_scope_expr
+              name: (identifier)
+              value: (identifier)
+              body: (block
+                (expression_statement
+                  (identifier))))))))))
+
+==================
+spawn consume multi-var
+==================
+
+fn f() {
+    spawn consume ar, bw { pump(ar, bw) }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (spawn_expr
+            names: (identifier)
+            names: (identifier)
+            body: (block
+              (expression_statement
+                (call_expr
+                  func: (identifier)
+                  args: (call_arg
+                    (identifier))
+                  args: (call_arg
+                    (identifier)))))))))))
+
+==================
+detach consume binding
+==================
+
+fn f() {
+    detach consume c = expr { body }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (detach_expr
+            name: (identifier)
+            value: (identifier)
+            body: (block
+              (expression_statement
+                (identifier)))))))))
+
+==================
+consume scope-block binding form
+==================
+
+fn f() {
+    consume tx = init() { body }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (consume_scope_expr
+            name: (identifier)
+            value: (call_expr
+              func: (identifier))
+            body: (block
+              (expression_statement
+                (identifier)))))))))
+
+==================
+consume scope-block re-consume multivar
+==================
+
+fn f() {
+    consume a, b, c { body }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (expression_statement
+          (consume_scope_expr
+            (identifier)
+            (identifier)
+            (identifier)
+            (block
+              (expression_statement
+                (identifier)))))))))
+
+==================
+turbofish multi-arg static call via index_expr
+==================
+
+fn f() {
+    ro m = IndexMap[str, int].new()
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (binding_statement
+          pattern: (identifier)
+          value: (call_expr
+            func: (field_expr
+              object: (index_expr
+                object: (identifier)
+                index: (identifier)
+                index: (identifier))
+              field: (identifier))))))))
+
+==================
+pointer types
+==================
+
+extern "C" fn read_buffer(buf *Buffer) -> i64
+extern "C" fn fill_buffer(buf *mut Buffer) -> i64
+extern "C" fn raw_alloc_slot(slot *uninit Buffer) -> ()
+
+---
+
+(source_file
+  (fn_declaration
+    abi: (string_literal)
+    name: (identifier)
+    params: (param_list
+      (param
+        name: (identifier)
+        type: (pointer_type
+          pointee: (named_type
+            name: (type_name)))))
+    return_type: (named_type
+      name: (type_name)))
+  (fn_declaration
+    abi: (string_literal)
+    name: (identifier)
+    params: (param_list
+      (param
+        name: (identifier)
+        type: (pointer_type
+          pointee: (named_type
+            name: (type_name)))))
+    return_type: (named_type
+      name: (type_name)))
+  (fn_declaration
+    abi: (string_literal)
+    name: (identifier)
+    params: (param_list
+      (param
+        name: (identifier)
+        type: (pointer_type
+          (keyword)
+          pointee: (named_type
+            name: (type_name)))))
+    return_type: (unit_type)))
+
+==================
+value record type
+==================
+
+export type ChanTx[T] value { priv ch Chan[T] }
+
+---
+
+(source_file
+  (type_declaration
+    name: (type_name)
+    generics: (generic_params
+      (generic_param
+        name: (identifier)))
+    (record_type_body
+      (record_field
+        name: (identifier)
+        type: (named_type
+          name: (type_name)
+          type_args: (generic_type_args
+            (named_type
+              name: (type_name))))))))
+
+==================
+priv pub field modifiers
+==================
+
+export type Account {
+    priv mut money f64
+    ro name str
+    pub id u64
+}
+
+---
+
+(source_file
+  (type_declaration
+    name: (type_name)
+    (record_type_body
+      (record_field
+        name: (identifier)
+        type: (named_type
+          name: (type_name)))
+      (record_field
+        name: (identifier)
+        type: (named_type
+          name: (type_name)))
+      (record_field
+        name: (identifier)
+        type: (named_type
+          name: (type_name))))))
+
+==================
+pipe closure light
+==================
+
+fn f() {
+    ro inc = |x| x + 1
+    ro zero = || 0
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (binding_statement
+          (identifier)
+          (pipe_closure_expr
+            (identifier)
+            (binary_expr
+              (identifier)
+              (number_literal))))
+        (binding_statement
+          (identifier)
+          (pipe_closure_expr
+            (number_literal)))))))
+
+==================
+handler literal with interrupt
+==================
+
+fn f() {
+    with Fail = effect Fail {
+        fail(err) => interrupt default_value
+    } {
+        body
+    }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (with_expr
+            (with_binding
+              effect: (named_type
+                name: (type_name))
+              handler: (handler_literal_expr
+                name: (type_name)
+                (handler_method
+                  name: (identifier)
+                  params: (handler_param_list
+                    (handler_param
+                      name: (identifier)))
+                  body: (fn_body
+                    expr: (interrupt_expr
+                      value: (identifier))))))
+            body: (block
+              (expression_statement
+                (identifier)))))))))
+
+==================
+array pattern in match
+==================
+
+fn f(xs []int) -> int => match xs {
+    [] => -1,
+    [x, ..] => x
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list
+      (param
+        (identifier)
+        (array_type
+          (named_type
+            (type_name)))))
+    (named_type
+      (type_name))
+    (fn_body
+      (match_expr
+        (identifier)
+        (match_arm
+          (array_pattern)
+          (unary_expr
+            (number_literal)))
+        (match_arm
+          (array_pattern
+            (name_pattern
+              (identifier))
+            (rest_pattern))
+          (identifier))))))
+
+==================
+array and record spread literals
+==================
+
+fn f() {
+    ro c = [...a, ...b]
+    ro admin = { ...alice, role: "admin" }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (fn_body
+      (block
+        (binding_statement
+          (identifier)
+          (array_literal
+            (identifier)
+            (identifier)))
+        (binding_statement
+          (identifier)
+          (anon_record_literal
+            (field_init
+              (identifier))
+            (field_init
+              (identifier)
+              (string_literal))))))))
+
+==================
+unit expr as body
+==================
+
+fn f() -> () {
+    ()
+}
+
+---
+
+(source_file
+  (fn_declaration
+    (identifier)
+    (param_list)
+    (unit_type)
+    (fn_body
+      (block
+        (expression_statement
+          (unit_expr))))))
+
+==================
+extern abi fn declaration
+==================
+
+extern "nova" fn CancelToken.new() -> Self
+
+---
+
+(source_file
+  (fn_declaration
+    (string_literal)
+    (type_name)
+    (identifier)
+    (param_list)
+    (named_type
+      (type_name))))
+
+==================
+parallel for expression
+==================
+
+fn f(urls []str) {
+    parallel for url in urls {
+        fetch(url)
+    }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list
+      (param
+        name: (identifier)
+        type: (array_type
+          elem: (named_type
+            name: (type_name)))))
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (parallel_expr
+            pattern: (name_pattern
+              name: (identifier))
+            iter: (identifier)
+            body: (block
+              (expression_statement
+                (call_expr
+                  func: (identifier)
+                  args: (call_arg
+                    (identifier)))))))))))
+
+==================
+semicolon statement separator
+==================
+
+fn f() {
+    println("a"); println("b")
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list)
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (call_expr
+            func: (identifier)
+            args: (call_arg
+              (string_literal))))
+        (expression_statement
+          (call_expr
+            func: (identifier)
+            args: (call_arg
+              (string_literal))))))))
+
+==================
+match arms newline separated no comma
+==================
+
+fn classify(x int) -> str {
+  match x {
+    n if n > 0 => "positive"
+    0 => "zero"
+    _ => "negative"
+  }
+}
+
+---
+
+(source_file
+  (fn_declaration
+    name: (identifier)
+    params: (param_list
+      (param
+        name: (identifier)
+        type: (named_type
+          name: (type_name))))
+    return_type: (named_type
+      name: (type_name))
+    body: (fn_body
+      block: (block
+        (expression_statement
+          (match_expr
+            scrutinee: (identifier)
+            (match_arm
+              pattern: (name_pattern
+                name: (identifier))
+              guard: (binary_expr
+                left: (identifier)
+                right: (number_literal))
+              body: (string_literal))
+            (match_arm
+              pattern: (literal_pattern
+                (number_literal))
+              body: (string_literal))
+            (match_arm
+              pattern: (wildcard_pattern)
+              body: (string_literal))))))))
+
+==================
+protocol with at-prefixed magic method
+==================
+
+type Display protocol { @display(mut f Fmt) -> () }
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (protocol_type_body
+      (effect_method
+        (identifier)
+        (param_list
+          (param
+            (identifier)
+            (named_type
+              (type_name))))
+        (unit_type)))))
+
+==================
+legacy leading pipe sum type backward compat
+==================
+
+type Discount
+    | Flat(int)
+    | Percent(int)
+
+---
+
+(source_file
+  (type_declaration
+    (type_name)
+    (legacy_sum_type_body
+      (sum_variant
+        (type_name)
+        (named_type
+          (type_name)))
+      (sum_variant
+        (type_name)
+        (named_type
+          (type_name))))))
