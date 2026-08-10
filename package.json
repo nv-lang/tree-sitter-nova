@@ -10,7 +10,7 @@
     "nova-lang"
   ],
   "author": "Evgeniy Golovin <unitcraft@nv-lang.org>",
-  "license": "MIT",
+  "license": "MIT OR Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nv-lang/tree-sitter-nova.git"
