@@ -111,6 +111,12 @@
   "${" @punctuation.special
   "}" @punctuation.special)
 
+; Backtick literal (D467). The bare form is a string like any other -- it is
+; the default tag, not a raw literal -- so it gets @string, and the tag of the
+; tagged form is highlighted as the function it desugars into.
+(backtick_literal) @string
+(backtick_literal tag: (identifier) @function)
+
 ; ─── Operators ───────────────────────────────────────────────────────────────
 
 [

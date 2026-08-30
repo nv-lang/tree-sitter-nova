@@ -688,6 +688,7 @@ module.exports = grammar({
       $.identifier,          // identifier as expression
       $.number_literal,
       $.string_literal,
+      $.backtick_literal,   // D467: tagged AND bare backtick
       $.char_literal,
       $.bool_literal,
     ),
@@ -1473,15 +1474,72 @@ module.exports = grammar({
         token.immediate(/[^"\\$]+/),              // plain chars
         token.immediate(/\\./),                   // escape sequence
         $.string_interpolation,                   // ${expr}
+        token.immediate('$'),                     // lone `$` -- see note below
       )),
       '"',
     ),
+
+    // A `$` that does NOT open an interpolation is ordinary text, and the rule
+    // above used to reject it: `"cost: $ and more"` failed to parse. Measured
+    // against the compiler on 2026-08-30 rather than assumed -- it builds and
+    // prints `cost: $ and more`. `${` still wins over `$` because the lexer
+    // takes the longest match.
 
     string_interpolation: $ => seq(
       token.immediate('${'),
       $._expression,
       '}',
     ),
+
+    // ── Backtick literal (D467, plan 277) ────────────────────────────────
+    // Three things the grammar must get right, all of them normative:
+    //
+    //   * the BARE form is not a raw string -- it is the default tag and it
+    //     interpolates (D467 §5). Before that decision the bare form printed
+    //     `${x}` literally; registry #795 carries the measurement.
+    //   * the escape set inside a backtick is closed to EXACTLY three --
+    //     `` \` ``, `\\`, `\$` (D467 §6). `\n` and `\t` are NOT escapes here,
+    //     which is the whole point of the form: `` regex`\d{3}` `` needs no
+    //     double escaping. A `/\\./` class copied from the string rule would
+    //     silently re-open the set.
+    //   * the body MAY span lines (§7, block form). The plain-chars class
+    //     below therefore includes newlines on purpose -- a line-anchored
+    //     rule would be wrong.
+    //
+    // The tagged form requires the backtick to sit IMMEDIATELY after the tag
+    // (`sql`...``, no space), which is what token.immediate expresses; the bare
+    // form has no preceding token, so the two cases cannot share one seq.
+    backtick_literal: $ => choice(
+      seq(
+        field('tag', $.identifier),
+        token.immediate('`'),
+        repeat($._backtick_part),
+        '`',
+      ),
+      seq(
+        '`',
+        repeat($._backtick_part),
+        '`',
+      ),
+    ),
+
+    _backtick_part: $ => choice(
+      token.immediate(/[^`\\$]+/),               // plain chars, newlines included
+      token.immediate(/\\[`\\$]/),               // D467 §6: exactly ` \ $
+      token.immediate(/\\/),                     // ANY other backslash is TEXT
+      $.string_interpolation,                    // ${expr}
+      token.immediate('$'),                      // lone `$` (measured: legal)
+    ),
+
+    // The lone-backslash alternative is the point of the whole form, not a
+    // loose end. `\n` inside a backtick is NOT an escape (D467 §6 closed the
+    // set to three), so `` `C:\new\table` `` is a PATH -- measured against the
+    // compiler on 2026-08-30: it builds and prints `C:\new\table`, byte_len 12.
+    // The first revision of this rule omitted it and tree-sitter answered
+    // `(ERROR)` on exactly that literal -- that is, Windows paths, the form's
+    // main reason to exist, would have lost highlighting everywhere. The lexer
+    // still prefers the two-character escapes because it takes the longest
+    // match.
 
     // line_comment must NOT match '///' РІР‚вЂќ guard with [^/\r\n] as first char
     line_comment: _ => token(seq('//', /([^/\r\n][^\r\n]*)?/)),

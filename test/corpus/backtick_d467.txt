@@ -1,0 +1,111 @@
+==================
+backtick: bare form, no interpolation
+==================
+
+ro a = `plain`
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (backtick_literal)))
+
+==================
+backtick: bare form interpolates (D467 section 5)
+==================
+
+ro b = `a=${i}`
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (backtick_literal
+      (string_interpolation
+        (identifier)))))
+
+==================
+backtick: tagged form keeps the tag as a field
+==================
+
+ro c = sql`select 1`
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (backtick_literal
+      tag: (identifier))))
+
+==================
+backtick: the escape set is exactly three (D467 section 6)
+==================
+
+ro d = `tick \` slash \\ dollar \$ end`
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (backtick_literal)))
+
+==================
+backtick: a non-escape backslash is plain text -- a Windows path
+==================
+
+ro e = `C:\new\table`
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (backtick_literal)))
+
+==================
+backtick: the body may span lines (D467 section 7, block form)
+==================
+
+ro f = `line one
+line two`
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (backtick_literal)))
+
+==================
+backtick: interpolation inside the block form
+==================
+
+ro g = `head
+  value=${x}
+tail`
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (backtick_literal
+      (string_interpolation
+        (identifier)))))
+
+==================
+string: a lone dollar is ordinary text, not an interpolation
+==================
+
+ro h = "cost: $ plain"
+
+---
+
+(source_file
+  (ro_declaration
+    name: (identifier)
+    value: (string_literal)))
